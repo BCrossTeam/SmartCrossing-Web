@@ -1,0 +1,36 @@
+@import "variables";
+@import "mixins";
+
+header{
+  background:
+    url('/images/headBackground.jpg')
+    top center
+    no-repeat;
+  background-size: cover;
+  min-height: 550px;
+  @include sectionShadow;
+  h1{
+    color: #222;
+    padding: 30px;
+    position: relative;
+    top: 50px;
+  }
+}
+
+#navi{
+  a{
+    color: #444;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    &:hover {
+      border-color: #1B1C1D;
+      color: #222;
+    }
+  }
+
+  img{
+    opacity: 0.76;
+  }
+}

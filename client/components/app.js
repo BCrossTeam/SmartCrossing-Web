@@ -5,11 +5,14 @@ import '../styles/main.scss';
 import 'jquery';
 import '../../server/public/semantic/dist/semantic.min.js';
 
+import Header from './header';
 
 class App extends Component {
   render() {
     return(
-      <div className="ui container">expect no mercy {this.props.test}</div>
+      <div>
+        <Header />
+      </div>
     );
   }
 }

@@ -4,7 +4,8 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "server": "nodemon --watch server --exec babel-node -- server/index.js"
+    "server": "nodemon --watch server --exec babel-node -- server/index.js",
+    "testt": "babel-node test.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.25.0",
+    "mysql": "^2.11.1",
     "node-sass": "^3.10.1",
     "nodemon": "^1.11.0",
     "sass-loader": "^4.0.2",
