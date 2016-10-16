@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Element} from 'react-scroll';
 
 import '../styles/section1.scss';
 
@@ -7,7 +8,7 @@ import StatsModule from './stats';
 class SectionOne extends Component {
   render() {
     return(
-      <section id="section-one">
+      <section id="section-one"><Element name="projekt">
         <div className="ui container">
           <StatsModule />
           <img src="/images/wroc.jpg" className="book-img" alt=""/>
@@ -19,7 +20,7 @@ class SectionOne extends Component {
               <div className="column"><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec commodo at justo in malesuada. Suspendisse sed tempus dolor. Fusce laoreet mauris dolor, at porttitor augue sodales in. Sed eget vehicula purus. Nullam et est non orci rutrum auctor. Pellentesque non pharetra nunc, sed malesuada velit. Integer pretium maximus enim, quis porta arcu iaculis a. Vivamus mattis tincidunt ipsum, eget tristique tortor ultrices vitae.</p></div>
             </div>
           </div>
-        </div>
+        </div></Element>
       </section>
     );
   }

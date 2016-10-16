@@ -1,16 +1,16 @@
 @import "variables";
 @import "mixins";
 #module-two {
-  top: -320px;
+  top: -100px;
   @include statsModSize("right");
   @include boxShadow;
   color: $imdur;
-  z-index: 80;
   left: 72%;
+  z-index: 80;
 }
 
 #section-three{
-  height: 750px;
+  height: 920px;
 
   .list {
     padding: 50px 0;

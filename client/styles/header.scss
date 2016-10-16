@@ -18,19 +18,24 @@ header{
 }
 
 #navi{
+  background-color: $schizo;
+  .active{
+    border-color: #fff;
+    color: #fff;
+  }
   a{
-    color: #444;
+    color: $imdur;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 19px;
     text-transform: uppercase;
     transition: 0.5s;
     &:hover {
-      border-color: #1B1C1D;
-      color: #222;
+      border-color: #fff;
+      color: #fff;
     }
   }
-
   img{
-    opacity: 0.76;
+    opacity: 0.98;
   }
+
 }
