@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixins";
+
+#section-two {
+  color: red;
+  height: 750px;
+  h2 {
+    text-align: center;
+    font-size: 62px;
+    color: $grey;
+    @include textShadow;
+    margin-top: 30px;
+  }
+
+  .column{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .step{
+    text-transform: uppercase;
+    color: $grey;
+    @include textShadow;
+    font-weight: 700;
+    font-size: 28px;
+  }
+  hr{
+    width: 14%;
+    height: 8px;
+    color: $disconnect;
+    background-color: $disconnect;
+    margin-top: 25px;
+  }
+
+  p{
+    color: $grey;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .download{
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+}

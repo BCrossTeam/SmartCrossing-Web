@@ -1,7 +1,16 @@
+import {FETCH_STATS} from '../actions/index';
+
 const INITIAL_STATE = {
-  test: "JustTesting"
+  books: null,
+  bookshelves: null,
+  readers: null
 };
 
 export default function(state = INITIAL_STATE, action) {
-  return state;
+  switch (action.type) {
+    case FETCH_STATS:
+      return {...action.payload};
+    default:
+      return state;
+  }
 }

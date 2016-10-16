@@ -1,7 +1,26 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {fetchStats} from '../actions/index';
 
 class StatsModule extends Component {
+  constructor(props){
+    super(props);
+  }
+
+  componentWillMount() {
+    this.props.fetchStats();
+  }
+
   render() {
+    const {books, bookshelves, readers} = this.props.stats;
+    if(!books || !bookshelves || !readers) {
+      return(
+      <div id="module-one">
+        <h2>Uwolnij wiedzę!</h2>
+        <div className="ui active centered massive text loader">Ładowanie..</div>
+
+      </div>
+    );}
     return(
       <div id="module-one">
         <h2>Uwolnij wiedzę!</h2>
@@ -9,7 +28,7 @@ class StatsModule extends Component {
           <div className="ui statistic huge first-value">
               <div className="value">
                 <img src="images/agenda.png" className="ui inline image" />
-                <span>758</span>
+                <span>{books}</span>
               </div>
               <div className="label">
                 <span>Wymienionych książek</span>
@@ -18,7 +37,7 @@ class StatsModule extends Component {
 
           <div className="ui statistic large second-value">
             <div className="value">
-              <span>23</span>
+              <span>{bookshelves}</span>
               <img src="images/bookshelf.png" className="ui inline image" />
             </div>
             <div className="label">
@@ -29,7 +48,7 @@ class StatsModule extends Component {
           <div className="ui statistic large third-value">
             <div className="value">
               <img src="images/users.png" className="ui inline image" />
-              <span>132</span>
+              <span>{readers}</span>
             </div>
             <div className="label">
               <span>Czytelników</span>
@@ -41,4 +60,8 @@ class StatsModule extends Component {
   }
 }
 
-export default StatsModule;
+function mapStateToProps(state) {
+  return {stats: state.stats};
+}
+
+export default connect(mapStateToProps, {fetchStats})(StatsModule);
