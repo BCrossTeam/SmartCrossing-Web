@@ -24,14 +24,11 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     })
-  ],
-
-  plugins: [
-   new webpack.ProvidePlugin({
-     $: "jquery",
-     jQuery: "jquery"
-   })
   ],
   module: {
     loaders: [
