@@ -1,0 +1,92 @@
+@import "variables";
+@import "mixins";
+
+#section-one {
+  height: 750px;
+  .book-img {
+    position: relative;
+    top: -505px;
+    left: 300px;
+    max-height: 290px;
+    @include sectionShadow;
+  }
+}
+
+#module-one{
+  top: -140px;
+  @include statsModSize("left");
+  @include boxShadow;
+  color: $imdur;
+  z-index: 100;
+
+  h2 {
+    position: relative;
+    top: 65px;
+    text-align: center;
+    font-size: 36px;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  span {
+    color: white;
+  }
+  .label{
+    font-size: 16px;
+  }
+
+  .first-value {
+    @include valuesInStats;
+    top: 90px;
+    img {
+      max-height: 60px;
+    }
+  }
+
+  .second-value {
+    @include valuesInStats;
+    top: 120px;
+    img {
+      max-height: 60px;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .third-value {
+    @include valuesInStats;
+    top: 150px;
+    img {
+      max-height: 53px;
+    }
+  }
+}
+
+.paragraph {
+  position: relative;
+  top: -550px;
+  margin: 0;
+  width: 740px;
+  float: right;
+}
+
+h1{
+  position: relative;
+  top: -490px;
+  font-size: 64px;
+  color: $grey;
+  @include textShadow;
+  text-align: right;
+}
+
+.sec-one-content {
+  margin: 0 auto;
+  position: relative;
+  top: -490px;
+  p {
+    text-align: justify;
+    font-size: 16px;
+  }
+}

@@ -1,3 +1,32 @@
 @mixin sectionShadow {
   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.75);
 }
+
+@mixin textShadow {
+  text-shadow: 0px 1px 1px rgba(100, 100, 100, 1);
+}
+
+@mixin boxShadow {
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+}
+
+@mixin statsModSize($side) {
+  background-color: $disconnect;
+  position: relative;
+  -webkit-clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  @if $side == "left" {
+    max-width: 300px;
+    height: 560px;
+  } @else if $side == "right" {
+    max-width: 400px;
+    height: 680px;
+  }
+}
+
+@mixin valuesInStats {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
