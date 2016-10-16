@@ -2,13 +2,31 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtools: 'eval-source-map',
-  entry: './client/index.js',
+  devtool: 'source-map',
+
+  entry: path.join(__dirname, '/client/index.js'),
+
   output: {
     path: path.join(__dirname, 'server/public'),
     filename: 'bundle.js',
-    publicPath: '/server/public/'
+    publicPath: 'server/public/'
   },
+
+  plugins: [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
+
   plugins: [
    new webpack.ProvidePlugin({
      $: "jquery",
@@ -31,6 +49,5 @@ module.exports = {
   },
   resolve: {
     extensions: [ '', '.js' ]
-  },
-  watch: true
+  }
 }

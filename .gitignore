@@ -1,3 +1,6 @@
 node_modules
-server
-test.js
+npm-debug.log
+bundle.js
+bundle.js.map
+semantic/
+images/

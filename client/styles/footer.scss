@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+
+footer{
+  background-color: $grey;
+  z-index: 150;
+  height: 220px;
+  position: relative;
+  -webkit-clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+  h2 {
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+  }
+
+  .list {
+    float: right;
+    color: white;
+  }
+  .item{
+    font-size: 22px;
+    position: relative;
+        margin-right: 20px;
+
+  }
+  .item:first-child{
+    margin-top: 50px;
+
+  }
+}

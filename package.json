@@ -4,8 +4,9 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "server": "nodemon --watch server --exec babel-node -- server/index.js",
-    "testt": "babel-node test.js"
+    "dev": "concurrently \"nodemon --watch server --exec babel-node -- server/index.js\" \"webpack --config ./webpack.config.dev.js --progress --colors\"",
+    "postinstall": "webpack --config ./webpack.config.prod.js --progress --colors",
+    "start": "babel-node ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "lodash": "^4.16.4",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-google-maps": "^6.0.1",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
     "semantic-ui": "^2.2.4"
