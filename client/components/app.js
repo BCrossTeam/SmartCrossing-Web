@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import '../styles/main.scss';
 import 'jquery';
-import '../../server/public/semantic/dist/semantic.min.js';
+import '../../server/public/semantic.min.js';
 
 import Header from './header';
 import SectionOne from './section1';
