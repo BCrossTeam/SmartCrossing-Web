@@ -7,4 +7,7 @@
   background-size: cover;
   height: 500px;
   @include sectionShadow;
+  @include mQ(1000px) {
+    height: 350px;
+  }
 }

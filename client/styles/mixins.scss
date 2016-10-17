@@ -17,7 +17,7 @@
   clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
   @if $side == "left" {
     max-width: 300px;
-    height: 560px;
+    height: 520px;
   } @else if $side == "right" {
     max-width: 400px;
     height: 680px;
@@ -30,4 +30,17 @@
   margin: 0 auto;
   width: 100%;
   text-align: center;
+}
+
+@mixin mQ($arg...) {
+  @if length($arg) == 1 {
+    @media screen and (max-width: nth($arg, 1)) {
+      @content;
+    }
+  }
+  @if length($arg) == 2{
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)) {
+      @content;
+    }
+  }
 }

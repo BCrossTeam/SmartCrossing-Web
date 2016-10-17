@@ -2,15 +2,77 @@
 @import "mixins";
 
 #section-one {
-  height: 750px;
+  height: 730px;
   .book-img {
     position: relative;
-    top: -505px;
+    top: -485px;
     left: 300px;
     max-height: 290px;
     @include sectionShadow;
+
   }
-}
+  @include mQ(1000px, 768px) {
+    height: 620px;
+    .container {
+      padding: 0;
+      margin: 0 !important;
+      width: 100%;
+    }
+    .book-img { display: none; }
+    h1 {
+      position: static;
+      text-align: center;
+    }
+    .sec-one-content{
+      position: static;
+      padding: 10px;
+    }
+  }
+  @include mQ(767px, 610px) {
+    height: 720px;
+    .container {
+      padding: 0;
+      margin: 0 !important;
+      width: 100%;
+    }
+    .book-img { display: none; }
+    h1 {
+      position: static;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .sec-one-content{
+      position: static;
+      padding: 10px;
+    }
+    .column {
+      width: 100%;
+      margin-bottom: 15px
+    }
+  }
+  @include mQ(609px) {
+    height: 860px;
+    .container {
+      padding: 0;
+      margin: 0 !important;
+      width: 100%;
+    }
+    .book-img { display: none; }
+    h1 {
+      position: static;
+      text-align: center;
+    }
+    .sec-one-content{
+      position: static;
+      padding: 10px;
+    }
+    .column {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  }
+
 
 #module-one{
   top: -140px;
@@ -28,6 +90,9 @@
       text-decoration: underline;
       cursor: pointer;
     }
+    @include mQ(1000px) {
+      display:none;
+    }
   }
 
   span {
@@ -39,13 +104,26 @@
 
   .first-value {
     @include valuesInStats;
+    @include mQ(1000px) {
+      width: (100%/3);
+      position: static;
+      margin: auto 0;
+    }
     top: 100px;
     img {
-      max-height: 60px;
+      max-height: 53px;
+      position: relative;
+      top: 5px;
     }
   }
 
   .second-value {
+    @include mQ(1000px) {
+      width: (100%/3);
+      position: relative;
+      top:-5px;
+      margin: auto 0;
+    }
     @include valuesInStats;
     top: 130px;
     img {
@@ -56,10 +134,33 @@
   }
 
   .third-value {
+    @include mQ(1000px) {
+      width: (100%/3);
+      position: static;
+      margin: auto 0;
+      img{
+        padding-top: 12px;
+        padding-right: 5px;
+      }
+    }
     @include valuesInStats;
     top: 160px;
     img {
       max-height: 53px;
+    }
+  }
+
+  @include mQ(1000px) {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    position: static;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    max-height: 120px;
+    .statistics {
+      height: 100%;
+      margin: 0;
     }
   }
 }

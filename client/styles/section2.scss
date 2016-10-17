@@ -45,4 +45,15 @@
       cursor:pointer;
     }
   }
+  @include mQ(767px) {
+    height: 500px;
+    .download{
+      width: 50%;
+    }
+    .column {
+      p {
+        display: none;
+      }
+    }
+  }
 }

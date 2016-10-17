@@ -26,7 +26,7 @@ class StatsModule extends Component {
       <div id="module-one">
         <h2>Uwolnij wiedzę!</h2>
         <div className="ui statistics">
-          <div className="ui statistic huge first-value">
+          <div className="ui statistic massive first-value">
               <div className="value">
                 <img src="images/agenda.png" className="ui inline image" />
                 <span>{books}</span>
@@ -46,7 +46,7 @@ class StatsModule extends Component {
             </div>
           </div>
 
-          <div className="ui statistic large third-value">
+          <div className="ui statistic massive third-value">
             <div className="value">
               <img src="images/users.png" className="ui inline image" />
               <span>{readers}</span>

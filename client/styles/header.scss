@@ -9,11 +9,8 @@ header{
   background-size: cover;
   min-height: 550px;
   @include sectionShadow;
-  h1{
-    color: #222;
-    padding: 30px;
-    position: relative;
-    top: 50px;
+  @include mQ(1000px) {
+    min-height: 350px;
   }
 }
 
@@ -36,6 +33,29 @@ header{
   }
   img{
     opacity: 0.98;
-  }
 
+  }
+  .mob-menu{
+    display: none;
+  }
+  .mob-item{
+    display: block;
+  }
+  @include mQ(767px) {
+    .logo-img{
+      display: none;
+    }
+    .mob-item{
+      display: none;
+      text-align: left;
+    }
+    .mob-menu{
+      img{
+        width: 20px;
+        float: right;
+      }
+      display: block;
+      text-align: left;
+    }
+  };
 }
