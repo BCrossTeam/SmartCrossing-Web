@@ -5,22 +5,6 @@
   background: url('/images/osso.jpg') no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 550px;
-  .red-block{
-    clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
-    background-color: $disconnect;
-    z-index: 100;
-    min-height: 250px;
-    position: relative;
-    top: 300px;
-    color: white;
-    text-align: right;
-
-    h2{
-      padding-top: 100px;
-    }
-
-    @include boxShadow;
-  }
+  height: 500px;
+  @include sectionShadow;
 }

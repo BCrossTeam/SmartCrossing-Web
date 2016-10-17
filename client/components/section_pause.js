@@ -6,8 +6,6 @@ class SectionPause extends Component {
   render() {
     return(
       <section id="section-pause">
-        <div className="red-block">
-        </div>
       </section>
     );
   }

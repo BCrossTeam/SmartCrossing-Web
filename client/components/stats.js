@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchStats} from '../actions/index';
+import {fetchUsersNumber, fetchBookshelfNumber, fetchBorrowedBooksNumber} from '../actions/stats_actions';
 
 class StatsModule extends Component {
   constructor(props){
@@ -8,7 +8,9 @@ class StatsModule extends Component {
   }
 
   componentWillMount() {
-    this.props.fetchStats();
+    this.props.fetchUsersNumber();
+    this.props.fetchBookshelfNumber();
+    this.props.fetchBorrowedBooksNumber();
   }
 
   render() {
@@ -18,7 +20,6 @@ class StatsModule extends Component {
       <div id="module-one">
         <h2>Uwolnij wiedzę!</h2>
         <div className="ui active centered massive text loader">Ładowanie..</div>
-
       </div>
     );}
     return(
@@ -64,4 +65,4 @@ function mapStateToProps(state) {
   return {stats: state.stats};
 }
 
-export default connect(mapStateToProps, {fetchStats})(StatsModule);
+export default connect(mapStateToProps, {fetchUsersNumber, fetchBookshelfNumber, fetchBorrowedBooksNumber})(StatsModule);

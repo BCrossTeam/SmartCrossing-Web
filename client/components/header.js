@@ -35,10 +35,10 @@ class Header extends Component {
           </Link>
           <img src="/images/wlogo.png" />
           <Link activeClass="active" to="tuto" spy={true} smooth={true} offset={-70} duration={500} className="item">
-            jak to działa?
+            pobierz
           </Link>
           <Link activeClass="active" to="register" spy={true} smooth={true} offset={150} duration={500} className="item">
-            rejestracja
+            dołącz do nas!
           </Link>
         </nav>
       </header>
