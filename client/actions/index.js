@@ -1,12 +1,11 @@
-export const ROOT_URL = `https://app.smartcrossing.amirecki.com`;
+export const ROOT_URL = `http://app.smartcrossing.amirecki.com`;
 export const urls = {
-  bookStatsById: `book/8/stats`,
+  bookStatsById: [`book/`,`/stats`],
   bookGeneralStats: `book/stats`,
-  bookshelfBooks: `bookshelf/1/book`,
-  bookshelfStatsById: `bookshelf/1/stats`,
+  bookshelfBooks: [`bookshelf/`,`/book`],
+  bookshelfStatsById: [`bookshelf/`,`/stats`],
   bookshelfNumber: `bookshelf/stats`,
   bookshelvesList: `bookshelf/`,
-  userStatsByID: `user/8/stats`,
+  userStatsByID: [`user/`,`/stats`],
   usersNumber: `user/stats`
 };
-    

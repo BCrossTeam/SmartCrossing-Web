@@ -37,7 +37,7 @@ class Header extends Component {
           <Link activeClass="active" to="tuto" spy={true} smooth={true} offset={-70} duration={500} className="item">
             pobierz
           </Link>
-          <Link activeClass="active" to="register" spy={true} smooth={true} offset={150} duration={500} className="item">
+          <Link activeClass="active" to="register" spy={true} smooth={true} offset={50} duration={500} className="item">
             dołącz do nas!
           </Link>
         </nav>
