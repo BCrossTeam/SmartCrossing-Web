@@ -5,6 +5,7 @@ class Tutorial extends Component {
     return(
       <div className="ui container">
       <h2>Jak to działa?</h2>
+
         <div className="ui three cards">
           <a className="red card">
             <div className="image">

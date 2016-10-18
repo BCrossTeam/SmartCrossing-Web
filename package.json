@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"nodemon --exec babel-node -- server/index.js\" \"webpack --config ./webpack.config.dev.js --progress --colors\"",
     "postinstall": "webpack --config ./webpack.config.prod.js --progress --colors",
-    "start": "babel-node ./server/index.js"
+    "start": "nodemon --exec babel-node -- server/index.js"
   },
   "engines": {
     "node": "6.8.0"

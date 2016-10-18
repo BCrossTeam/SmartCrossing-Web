@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import '../styles/main.scss';
-
+import '../styles/responsive.scss';
 import Header from './header';
 import SectionOne from './section1';
 import SectionPause from './section_pause';

@@ -10,7 +10,7 @@ header{
   min-height: 550px;
   @include sectionShadow;
   @include mQ(1000px) {
-    min-height: 350px;
+    min-height: 300px;
   }
 }
 
@@ -23,7 +23,7 @@ header{
   a{
     color: $imdur;
     font-weight: 700;
-    font-size: 19px;
+    font-size: 1.4em;
     text-transform: uppercase;
     transition: 0.5s;
     &:hover {

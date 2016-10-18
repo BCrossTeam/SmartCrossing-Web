@@ -1,4 +1,4 @@
-export const ROOT_URL = `http://app.smartcrossing.amirecki.com`;
+export const ROOT_URL = `https://api.smartcrossing.pl`;
 export const urls = {
   bookStatsById: [`book/`,`/stats`],
   bookGeneralStats: `book/stats`,

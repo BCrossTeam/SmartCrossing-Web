@@ -1,5 +1,21 @@
 @import "variables";
 @import "mixins";
+@mixin sec-one-resp {
+  .container {
+    padding: 0;
+    margin: 0 !important;
+    width: 100%;
+  }
+  .book-img { display: none; }
+  h1 {
+    position: static;
+    text-align: center;
+  }
+  .sec-one-content{
+    position: static;
+    padding: 10px;
+  }
+}
 
 #section-one {
   height: 730px;
@@ -9,62 +25,52 @@
     left: 300px;
     max-height: 290px;
     @include sectionShadow;
-
   }
   @include mQ(1000px, 768px) {
+    @include sec-one-resp;
     height: 620px;
-    .container {
-      padding: 0;
-      margin: 0 !important;
-      width: 100%;
-    }
-    .book-img { display: none; }
     h1 {
-      position: static;
-      text-align: center;
-    }
-    .sec-one-content{
-      position: static;
-      padding: 10px;
+      font-size: 6em;
     }
   }
   @include mQ(767px, 610px) {
+    @include sec-one-resp;
     height: 720px;
-    .container {
-      padding: 0;
-      margin: 0 !important;
-      width: 100%;
-    }
-    .book-img { display: none; }
     h1 {
-      position: static;
-      text-align: center;
-      margin-bottom: 0;
-    }
-    .sec-one-content{
-      position: static;
-      padding: 10px;
+      font-size: 5em;
     }
     .column {
       width: 100%;
       margin-bottom: 15px
     }
   }
-  @include mQ(609px) {
-    height: 860px;
-    .container {
-      padding: 0;
-      margin: 0 !important;
-      width: 100%;
-    }
-    .book-img { display: none; }
+  @include mQ(609px, 451px) {
+    @include sec-one-resp;
+    min-height: 850px;
     h1 {
-      position: static;
-      text-align: center;
+      font-size: 5em;
     }
-    .sec-one-content{
-      position: static;
-      padding: 10px;
+    .column {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  @include mQ(450px, 361px) {
+    @include sec-one-resp;
+    min-height: 940px;
+    h1 {
+      font-size: 5em;
+    }
+    .column {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  @include mQ(360px) {
+    @include sec-one-resp;
+    min-height: 1000px;
+    h1 {
+      font-size: 5em;
     }
     .column {
       width: 100%;
@@ -85,7 +91,7 @@
     position: relative;
     top: 80px;
     text-align: center;
-    font-size: 36px;
+    font-size: 4em;
     &:hover {
       text-decoration: underline;
       cursor: pointer;
@@ -99,11 +105,16 @@
     color: white;
   }
   .label{
-    font-size: 16px;
+    font-size: 1.7em;
   }
 
   .first-value {
     @include valuesInStats;
+    @include mQ(1000px) {
+      width: (100%/3);
+      position: static;
+      margin: auto 0;
+    }
     @include mQ(1000px) {
       width: (100%/3);
       position: static;
@@ -138,15 +149,14 @@
       width: (100%/3);
       position: static;
       margin: auto 0;
-      img{
-        padding-top: 12px;
-        padding-right: 5px;
-      }
     }
     @include valuesInStats;
     top: 160px;
     img {
-      max-height: 53px;
+      max-height: 46px;
+      position: relative;
+      top: 3px;
+      left: -4px;
     }
   }
 
@@ -161,6 +171,7 @@
     .statistics {
       height: 100%;
       margin: 0;
+      font-size: 0.8em;
     }
   }
 }
@@ -176,7 +187,7 @@
 h1{
   position: relative;
   top: -490px;
-  font-size: 64px;
+  font-size: 7em;
   color: $grey;
   @include textShadow;
   text-align: right;
@@ -188,15 +199,16 @@ h1{
   top: -490px;
   p {
     text-align: justify;
-    font-size: 16px;
+    font-size: 1.8em;
   }
 
 }
 
 .top-book {
+  display: block;
   h4{
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 3em;
     @include textShadow;
     margin-bottom: 5px;
     padding-bottom: 0;
@@ -216,5 +228,6 @@ h1{
   }
   .item {
     margin: 0 auto;
+    font-size: 1.6em;
   }
 }

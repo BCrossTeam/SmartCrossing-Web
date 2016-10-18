@@ -6,7 +6,7 @@
   height: 750px;
   h2 {
     text-align: center;
-    font-size: 62px;
+    font-size: 6.9em;
     color: $grey;
     @include textShadow;
     margin-top: 30px;
@@ -21,7 +21,7 @@
     color: $grey;
     @include textShadow;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 3em;
   }
   hr{
     width: 14%;
@@ -33,7 +33,7 @@
 
   p{
     color: $grey;
-    font-size: 16px;
+    font-size: 1.8em;
     margin-top: 10px;
   }
 

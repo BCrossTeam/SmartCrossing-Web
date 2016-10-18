@@ -61,7 +61,7 @@ class Header extends Component {
             projekt
           </Link>
           <img src="/images/wlogo.png" className="logo-img" />
-          <Link activeClass="active" to="tuto" spy={true} smooth={true} offset={-70} duration={500} className="item mob-item">
+          <Link activeClass="active" to="tutorial" spy={true} smooth={true} offset={-70} duration={500} className="item mob-item">
             pobierz
           </Link>
           <Link activeClass="active" to="register" spy={true} smooth={true} offset={50} duration={500} className="item mob-item">

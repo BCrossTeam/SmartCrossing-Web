@@ -8,6 +8,14 @@
   left: 72%;
   z-index: 80;
   overflow-y: scroll;
+  @include mQ(1000px) {
+    position: static;
+    top: 0;
+    height: 300px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 #section-three{
@@ -25,6 +33,12 @@
     }
     img{
       padding-top: 4px;
+      float: left;
+    }
+    .content{
+      float: left;
+      width: 90%;
+      font-size: 1.5em;
     }
     .header{
       color: $imdur !important;
@@ -34,14 +48,14 @@
   h3{
     padding: 65px 0 0 10px;
     color: white;
-    font-size: 26px;
+    font-size: 3em;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 0;
   }
   h4{
     padding: 40px;
-    font-size: 18px;
+    font-size: 1.8em;
     text-align: center;
   }
 
