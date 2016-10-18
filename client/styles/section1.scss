@@ -13,7 +13,9 @@
   }
   .sec-one-content{
     position: static;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -33,7 +35,7 @@
       font-size: 6em;
     }
   }
-  @include mQ(767px, 610px) {
+  @include mQ(767px, 612px) {
     @include sec-one-resp;
     height: 720px;
     h1 {
@@ -44,18 +46,18 @@
       margin-bottom: 15px
     }
   }
-  @include mQ(609px, 451px) {
+  @include mQ(611px, 451px) {
     @include sec-one-resp;
-    min-height: 850px;
+    min-height: 865px;
     h1 {
-      font-size: 5em;
+      font-size: 6em;
     }
     .column {
       width: 100%;
       margin-top: 15px;
     }
   }
-  @include mQ(450px, 361px) {
+  @include mQ(450px, 370px) {
     @include sec-one-resp;
     min-height: 940px;
     h1 {
@@ -66,9 +68,9 @@
       margin-top: 15px;
     }
   }
-  @include mQ(360px) {
+  @include mQ(369px) {
     @include sec-one-resp;
-    min-height: 1000px;
+    min-height: 1040px;
     h1 {
       font-size: 5em;
     }

@@ -1,8 +1,0 @@
-@import "variables";
-@import "mixins";
-
-header {
-  @include mQ(1000px) {
-    min-height: 350px;
-  }
-}

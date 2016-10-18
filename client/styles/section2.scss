@@ -4,6 +4,10 @@
 #section-two {
   color: red;
   height: 750px;
+  .grid{
+    width: 100%;
+    margin: 0 auto;
+  }
   h2 {
     text-align: center;
     font-size: 6.9em;
@@ -45,15 +49,75 @@
       cursor:pointer;
     }
   }
-  @include mQ(767px) {
-    height: 500px;
+  .desk-hidden{
+    display: none;
+  }
+}
+#section-two{
+  @include mQ(1000px, 767px) {
+    h2{
+      font-size: 6.4em;
+    }
     .download{
       width: 50%;
+      margin-top: 15px;
+    }
+  }
+  @include mQ(766px, 610px) {
+    height: 500px;
+    h2{
+      font-size: 5.9em;
+    }
+    .download{
+      width: 60%;
+      margin-top: 5px;
+      margin-bottom: 0;
     }
     .column {
       p {
         display: none;
       }
+    }
+  }
+  @include mQ(610px) {
+    height: 400px;
+    .container{
+      padding: 0;
+      margin: 0 !important;
+      width: 100%;
+    }
+    .item{
+      float: left;
+      width: (100%/3);
+      margin: 17px auto;
+      img{
+        width: 90px !important;
+      }
+    }
+    h2{
+      background-color: $disconnect;
+      width: 100%;
+      padding: 4px;
+      margin: 0;
+      color: $imdur;
+      font-size: 5.2em;
+    }
+    .mob-hidden{
+      display: none;
+    }
+    .desk-hidden{
+      display: block;
+    .header {
+      font-size: 2.2em;
+      padding: 5px;
+      text-transform: uppercase;
+      @include textShadow;
+    }
+    }
+    .download{
+      width: 70%;
+      margin-top: 5px;
+      margin-bottom: 0;
     }
   }
 }

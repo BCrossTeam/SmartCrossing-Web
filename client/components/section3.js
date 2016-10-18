@@ -31,17 +31,13 @@ class SectionThree extends Component {
       });
     });
 
-    const mapStyle = {
-      height: `500px`,
-      boxShadow: '0px 0px 1px 0px rgba(0,0,0,0.9)'
-    }
     return(
       <Element name='register'>
         <section id="section-three">
           <BookshelvesMap
             markers={markers}
-            containerElement={<div style={mapStyle} />}
-            mapElement={<div style={{ height: `500px` }} />}
+            containerElement={<div className="google-map" />}
+            mapElement={<div className="google-map-element" />}
             onMapLoad={_.noop}
             handleMarkerClick={this.handleMarkerClick.bind(this)}
           />

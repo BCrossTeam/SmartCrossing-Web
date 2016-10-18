@@ -6,7 +6,7 @@ class Tutorial extends Component {
       <div className="ui container">
       <h2>Jak to działa?</h2>
 
-        <div className="ui three cards">
+        <div className="ui three cards mob-hidden">
           <a className="red card">
             <div className="image">
             <img src="http://placehold.it/250x160" />
@@ -24,7 +24,7 @@ class Tutorial extends Component {
           </a>
         </div>
 
-        <div className="ui grid equal width">
+        <div className="ui grid equal width mob-hidden">
           <div className="row">
             <div className="column">
               <span className="step">zainstaluj</span><hr/>
@@ -40,6 +40,34 @@ class Tutorial extends Component {
             </div>
           </div>
         </div>
+
+        <div className="ui items desk-hidden">
+          <div className="item">
+            <div className="ui mini image">
+              <img src="/images/android.png"/>
+            </div>
+            <div className="middle aligned content">
+              <a className="header">Zainstaluj</a>
+            </div>
+          </div>
+          <div className="item">
+            <div className="ui tiny image">
+              <img src="/images/barcode.png"/>
+            </div>
+            <div className="middle aligned content">
+              <a className="header">Skanuj</a>
+            </div>
+          </div>
+          <div className="item">
+            <div className="ui tiny image">
+              <img src="/images/reading.png"/>
+            </div>
+            <div className="middle aligned content">
+              <a className="header">Czytaj</a>
+            </div>
+          </div>
+        </div>
+
         <img src="/images/google.png" className="ui centered image download" />
       </div>
     );

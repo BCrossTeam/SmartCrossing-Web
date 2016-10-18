@@ -8,14 +8,6 @@
   left: 72%;
   z-index: 80;
   overflow-y: scroll;
-  @include mQ(1000px) {
-    position: static;
-    top: 0;
-    height: 300px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
 }
 
 #section-three{
@@ -37,7 +29,7 @@
     }
     .content{
       float: left;
-      width: 90%;
+      width: 85%;
       font-size: 1.5em;
     }
     .header{
@@ -61,5 +53,74 @@
 
   .container {
     height: 0;
+  }
+  .google-map{
+    height: 500px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.9);
+  }
+  .google-map-element{
+    height: 500px;
+  }
+}
+
+#section-three {
+  @include mQ(1100px, 800px) {
+    #module-two {
+      height: 500px;
+      left: 60%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  @include mQ(799px, 610px) {
+    .container{
+      width: 100%;
+      margin: 0 !important;
+    }
+    #module-two{
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      position: static;
+      top: 0;
+      height: 400px;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+      h3 {
+        padding-top: 15px;
+      }
+    }
+    .google-map{
+      height: 300px;
+    }
+    .google-map-element{
+      height: 300px;
+    }
+
+  }
+  @include mQ(609px) {
+    .container{
+      width: 100%;
+      margin: 0 !important;
+    }
+    #module-two{
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      position: static;
+      top: 0;
+      height: 300px;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+      h3 {
+        padding-top: 15px;
+      }
+    }
+    .google-map{
+      height: 320px;
+    }
+    .google-map-element{
+      height: 320px;
+    }
   }
 }
