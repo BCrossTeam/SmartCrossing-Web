@@ -26,23 +26,19 @@ class BookList extends Component {
   render() {
     if(!this.props.activeBooks || !this.props.bookshelves) {
       return(
-        <div className="ui container">
           <div id="module-two">
           <div className="ui active centered massive text loader">Ładowanie..</div>
           </div>
-        </div>
       );
     }
 
     return (
-      <div className="ui container">
         <div id="module-two">
           <h3>PÓŁKA {this.props.bookshelves[this.props.activeBooks.bookshelf_id].bookshelf_name}</h3>
           <div className="ui celled list big">
             {this.renderBookList()}
           </div>
         </div>
-      </div>
     );
   }
 }

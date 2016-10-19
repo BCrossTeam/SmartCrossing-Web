@@ -7,5 +7,6 @@ export const urls = {
   bookshelfNumber: `bookshelf/stats`,
   bookshelvesList: `bookshelf/`,
   userStatsByID: [`user/`,`/stats`],
-  usersNumber: `user/stats`
+  usersNumber: `user/stats`,
+  topUsers: `user/ranking/3`
 };

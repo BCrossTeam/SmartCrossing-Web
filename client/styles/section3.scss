@@ -5,7 +5,6 @@
   @include statsModSize("right");
   @include boxShadow;
   color: $imdur;
-  left: 72%;
   z-index: 80;
   overflow-y: scroll;
 }
@@ -53,6 +52,7 @@
 
   .container {
     height: 0;
+    display: flex;
   }
   .google-map{
     height: 500px;
@@ -61,20 +61,24 @@
   .google-map-element{
     height: 500px;
   }
+  .sign-up{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
 }
 
 #section-three {
-  @include mQ(1100px, 800px) {
-    #module-two {
-      height: 500px;
-      left: 60%;
-      padding: 0;
-      margin: 0;
+  @include mQ(1000px, 800px) {
+    .loader {
+      position: relative;
+      top: 60px;
     }
-  }
-  @include mQ(799px, 610px) {
+    height: auto;
     .container{
       width: 100%;
+      height: auto;
       margin: 0 !important;
     }
     #module-two{
@@ -82,13 +86,66 @@
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       position: static;
       top: 0;
-      height: 400px;
+      height: auto;
+      max-width: 50%;
+      padding: 0;
+      margin: 0;
+      overflow-y: inherit;
+      h3 {
+        padding-top: 10px;
+      }
+      h4{
+        padding: 0 20px 20px 20px;
+      }
+    }
+    .sign-up {
+      width: 40%;
+      position: static;
+      button {
+        width: 100%;
+
+      }
+    }
+  }
+  @include mQ(799px, 610px) {
+    .loader {
+      position: relative;
+      top: 60px;
+    }
+    height: auto;
+    .container{
+      width: 100%;
+      height: auto;
+      margin: 0 !important;
+      display: block;
+    }
+    #module-two{
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      position: static;
+      top: 0;
+      height: auto;
       max-width: 100%;
       padding: 0;
       margin: 0;
+      overflow-y: inherit;
       h3 {
         padding-top: 15px;
       }
+      h4{
+        padding: 0 0 20px 0;
+      }
+    }
+    .sign-up{
+      position: static;
+      width: 80%;
+      button {
+        width: 100%;
+
+      }
+    }
+    .mini-hidden {
+      display: none;
     }
     .google-map{
       height: 300px;
@@ -99,22 +156,43 @@
 
   }
   @include mQ(609px) {
+    .loader {
+      position: relative;
+      top: 60px;
+    }
+    height: auto;
     .container{
       width: 100%;
+      height: auto;
       margin: 0 !important;
+      display: block;
     }
     #module-two{
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       position: static;
       top: 0;
-      height: 300px;
+      height: auto;
       max-width: 100%;
       padding: 0;
+      overflow-y: inherit;
       margin: 0;
       h3 {
         padding-top: 15px;
       }
+      h4{
+        padding: 0 0 20px 0;
+      }
+    }
+    .sign-up{
+      position: static;
+      width: 80%;
+      button {
+        width: 100%;
+      }
+    }
+    .mini-hidden {
+      display: none;
     }
     .google-map{
       height: 320px;

@@ -8,6 +8,7 @@ import {fetchBookshelves, fetchBooks} from '../actions/map_actions';
 
 import BookshelvesMap from './bookshelves_map';
 import BookList from './books_list';
+import SignUp from './signup';
 
 class SectionThree extends Component {
   componentWillMount() {
@@ -41,7 +42,10 @@ class SectionThree extends Component {
             onMapLoad={_.noop}
             handleMarkerClick={this.handleMarkerClick.bind(this)}
           />
+          <div className="ui container">
+          <SignUp />
           <BookList/>
+          </div>
         </section>
       </Element>
     );

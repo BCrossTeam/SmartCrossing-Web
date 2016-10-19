@@ -17,17 +17,18 @@
   clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
   @if $side == "left" {
     max-width: 300px;
-    height: 520px;
+    height: 500px;
   } @else if $side == "right" {
     max-width: 400px;
+    min-height: 120px;
     height: 680px;
     padding-bottom: 170px;
   }
 }
 
 @mixin valuesInStats {
-  position: relative;
-  margin: 0 auto;
+  position: static;
+  margin: 20px auto;
   width: 100%;
   text-align: center;
 }

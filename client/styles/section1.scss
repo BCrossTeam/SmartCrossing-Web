@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0 !important;
     width: 100%;
+    height: auto;
   }
   .book-img { display: none; }
   h1 {
@@ -14,7 +15,7 @@
   .sec-one-content{
     position: static;
     padding: 0 10px 10px 10px;
-    width: 100%;
+    width: auto;
     margin: 0 auto;
   }
 }
@@ -23,21 +24,24 @@
   height: 730px;
   .book-img {
     position: relative;
-    top: -485px;
+    top: -470px;
     left: 300px;
     max-height: 290px;
     @include sectionShadow;
   }
   @include mQ(1000px, 768px) {
     @include sec-one-resp;
-    height: 620px;
+    height: auto;
     h1 {
       font-size: 6em;
     }
   }
   @include mQ(767px, 612px) {
     @include sec-one-resp;
-    height: 720px;
+    height: auto;
+    .loader {
+      position: relative;
+    }
     h1 {
       font-size: 5em;
     }
@@ -48,7 +52,10 @@
   }
   @include mQ(611px, 451px) {
     @include sec-one-resp;
-    min-height: 865px;
+    .loader {
+      position: relative;
+    }
+    height: auto;
     h1 {
       font-size: 6em;
     }
@@ -57,20 +64,12 @@
       margin-top: 15px;
     }
   }
-  @include mQ(450px, 370px) {
+  @include mQ(450px) {
     @include sec-one-resp;
-    min-height: 940px;
-    h1 {
-      font-size: 5em;
+    height: auto;
+    .loader {
+      position: relative;
     }
-    .column {
-      width: 100%;
-      margin-top: 15px;
-    }
-  }
-  @include mQ(369px) {
-    @include sec-one-resp;
-    min-height: 1040px;
     h1 {
       font-size: 5em;
     }
@@ -109,6 +108,9 @@
   .label{
     font-size: 1.7em;
   }
+  .statistics{
+        margin-top: 100px;
+  }
 
   .first-value {
     @include valuesInStats;
@@ -122,7 +124,7 @@
       position: static;
       margin: auto 0;
     }
-    top: 100px;
+
     img {
       max-height: 53px;
       position: relative;
@@ -163,6 +165,9 @@
   }
 
   @include mQ(1000px) {
+    .loader {
+      position: relative;
+    }
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -188,7 +193,7 @@
 
 h1{
   position: relative;
-  top: -490px;
+  top: -480px;
   font-size: 7em;
   color: $grey;
   @include textShadow;
@@ -198,7 +203,7 @@ h1{
 .sec-one-content {
   margin: 0 auto;
   position: relative;
-  top: -490px;
+  top: -480px;
   p {
     text-align: justify;
     font-size: 1.8em;
@@ -206,7 +211,8 @@ h1{
 
 }
 
-.top-book {
+.top-read {
+  height: auto;
   display: block;
   h4{
     text-transform: uppercase;

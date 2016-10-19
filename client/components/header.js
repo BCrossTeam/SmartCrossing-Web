@@ -8,9 +8,7 @@ const {Events, Link, scrollSpy, Element} = Scroll;
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      menu: false
-    };
+    this.state = {menu: false};
   }
   componentDidMount() {
     Events.scrollEvent.register('begin', function(to, element) {
@@ -22,6 +20,7 @@ class Header extends Component {
     });
 
     scrollSpy.update();
+
     window.addEventListener('resize', () => {
       if(window.innerWidth > 767) {
         $('.mob-item').css("display", "block");
@@ -38,14 +37,14 @@ class Header extends Component {
     Events.scrollEvent.remove('end');
   }
 
-  jqery() {
-    let {menu} = this.state;
-    if(!menu) {
+  handleMenuClick() {
+    if(!this.state.menu) {
       $('.mob-item').css("display", "block");
-    } else if (menu) {
+      this.setState({menu: true});
+    } else {
       $('.mob-item').css("display", "none");
+      this.setState({menu: false});
     }
-    this.setState({menu: !menu});
   }
 
   render() {
@@ -53,7 +52,7 @@ class Header extends Component {
       <Element name='start'>
       <header>
         <nav id="navi" className="ui secondary pointing menu fixed stackable centered grid">
-          <a className="item mob-menu">Menu<img src="/images/menu.png" id="menu-button" onClick={this.jqery.bind(this)}/></a>
+          <a className="item mob-menu" onClick={this.handleMenuClick.bind(this, event)}>Menu<img src="/images/menu.png" id="menu-button" /></a>
           <Link activeClass="active" to="start" spy={true} smooth={true} duration={500} className="item mob-item">
             start
           </Link>

@@ -37,6 +37,7 @@ header{
   }
   .mob-menu{
     display: none;
+
   }
   .mob-item{
     display: block;
@@ -54,6 +55,9 @@ header{
         width: 20px;
         float: right;
       }
+      display: block;
+      width: 100%;
+      height: 100%;
       display: block;
       text-align: left;
     }
