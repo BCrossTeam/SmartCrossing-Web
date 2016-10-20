@@ -10,6 +10,7 @@ class SectionTwo extends Component {
     return(
       <Element name="tutorial">
       <section id="section-two">
+            <h2>Jak to działa?</h2>
         <Tutorial />
       </section>
       </Element>

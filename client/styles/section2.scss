@@ -43,8 +43,7 @@
 
   .download{
     width: 40%;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    padding: 15px 0;
     &:hover {
       cursor:pointer;
     }
@@ -55,23 +54,34 @@
 }
 #section-two{
   @include mQ(1000px, 767px) {
+    hr{
+      width: 20%;
+    }
     h2{
       font-size: 6.4em;
     }
     .download{
       width: 50%;
-      margin-top: 15px;
+      margin-top: 10px;
+    }
+    .column {
+      p{
+        text-align: justify;
+      }
     }
   }
   @include mQ(766px, 610px) {
     height: 500px;
+    hr{
+      width: 20%;
+    }
     h2{
-      font-size: 5.9em;
+      @include headerMobileText;
+      margin: 0 0 40px 0;
     }
     .download{
       width: 60%;
-      margin-top: 5px;
-      margin-bottom: 0;
+      margin-top: 0;
     }
     .column {
       p {
@@ -80,6 +90,10 @@
     }
   }
   @include mQ(610px) {
+    h2{
+      @include headerMobileText;
+      margin: 0 0 40px 0;
+    }
     height: 400px;
     .container{
       padding: 0;
@@ -94,28 +108,20 @@
         width: 90px !important;
       }
     }
-    h2{
-      background-color: $disconnect;
-      width: 100%;
-      padding: 4px;
-      margin: 0;
-      color: $imdur;
-      font-size: 5.2em;
-    }
     .mob-hidden{
       display: none;
     }
     .desk-hidden{
       display: block;
     .header {
-      font-size: 2.2em;
+      font-size: 2.3em;
       padding: 5px;
       text-transform: uppercase;
       @include textShadow;
     }
     }
     .download{
-      width: 70%;
+      width: 60%;
       margin-top: 5px;
       margin-bottom: 0;
     }

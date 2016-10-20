@@ -1,40 +1,42 @@
 import React, {Component} from 'react';
+import {reduxForm} from 'redux-form';
+import {signUpPost} from '../actions/signup_actions';
 
 class SignUp extends Component {
-
-  handleSubmit(event) {
-    event.preventDefault();
+  constructor(props) {
+    super(props);
   }
 
   render() {
+    const { fields: {username, email, password, checkPassword}, handleSubmit} = this.props;
+    console.log(this.props);
     return (
-      <form className="ui form sign-up mini-hidden" onSubmit={this.handleSubmit}>
+      <form className="ui form " onSubmit={handleSubmit(this.props.signUpPost)}>
         <div className="field">
           <label>Nazwa użytkownika</label>
-          <input type="text" placeholder="Jan Kowalski" />
+          <input type="text" placeholder="Jan Kowalski" {...username} />
         </div>
         <div className="field">
           <label>Email</label>
-          <input type="text" placeholder="kocham@ksiazki.pl" />
+          <input type="text" placeholder="kocham@ksiazki.pl" {...email} />
         </div>
         <div className="field">
           <label>Hasło</label>
-          <input type="password" />
+          <input type="password" {...password} />
         </div>
         <div className="field">
           <label>Powtórz hasło</label>
-          <input type="password" />
+          <input type="password" {...checkPassword} />
         </div>
-        <div className="field">
-          <div className="ui checkbox">
-            <input type="checkbox" tabIndex="0" className="hidden" />
-            <label>Akceptuję regulamin oraz warunki korzystania z aplikacji.</label>
-          </div>
-        </div>
-        <button className="ui button" type="submit">Zarejestruj</button>
+        <button className="ui button" type="submit" >Zarejestruj</button>
       </form>
     );
   }
 }
 
-export default SignUp;
+
+
+export default reduxForm({
+  form: 'SignUpForm',
+  fields: ['username', 'email', 'password', 'checkPassword']
+}, null, {signUpPost})(SignUp);

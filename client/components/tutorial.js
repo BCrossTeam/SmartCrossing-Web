@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class Tutorial extends Component {
   render() {
     return(
+
       <div className="ui container">
-      <h2>Jak to działa?</h2>
 
         <div className="ui three cards mob-hidden">
           <a className="red card">

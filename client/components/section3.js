@@ -11,12 +11,24 @@ import BookList from './books_list';
 import SignUp from './signup';
 
 class SectionThree extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showSignUp: false
+    };
+    console.log(this.state);
+  }
   componentWillMount() {
     this.props.fetchBookshelves().then(this.props.fetchBooks(1));
+    console.log(window.innerWidth);
   }
 
   handleMarkerClick(id) {
     this.props.fetchBooks(id);
+  }
+
+  showSignUp() {
+    this.setState({showSignUp: !this.state.showSignUp});
   }
 
   render() {
@@ -35,6 +47,7 @@ class SectionThree extends Component {
     return(
       <Element name='register'>
         <section id="section-three">
+          <h2 className="maxi-hidden" onClick={this.showSignUp.bind(this)}>rejestracja</h2>
           <BookshelvesMap
             markers={markers}
             containerElement={<div className="google-map" />}
@@ -43,8 +56,8 @@ class SectionThree extends Component {
             handleMarkerClick={this.handleMarkerClick.bind(this)}
           />
           <div className="ui container">
-          <SignUp />
-          <BookList/>
+          <div className={this.state.showSignUp ? `sign-up` : `mini-hidden sign-up`}><SignUp /></div>
+          <BookList />
           </div>
         </section>
       </Element>

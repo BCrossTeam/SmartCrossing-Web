@@ -45,3 +45,18 @@
     }
   }
 }
+
+@mixin headerMobileText {
+  text-transform: uppercase;
+  background-color: $disconnect;
+  width: 100%;
+  @include textShadow;
+  padding: 4px;
+  margin: 20px 0 0 0;
+  text-align: center;
+  color: $imdur;
+  font-size: 4.5em;
+  &:hover {
+    cursor: pointer;
+  }
+}

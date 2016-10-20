@@ -14,9 +14,9 @@
   .list {
     margin-top: 10px;
     .item{
-      border-top: solid 1px rgba(246,246,246, 0.7);
+      border-top: solid 1px rgba(246,246,246, 0.6);
       &:last-child{
-        border-bottom: solid 1px rgba(246,246,246, 0.7);;
+        border-bottom: solid 1px rgba(246,246,246, 0.6);
       }
       &:hover{
         background-color: lighten($disconnect, 4);
@@ -56,6 +56,7 @@
   }
   .google-map{
     height: 500px;
+    margin-top: 15px;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.9);
   }
   .google-map-element{
@@ -67,10 +68,14 @@
     margin: 0 auto;
     padding: 50px 0;
   }
+  .maxi-hidden {
+    display: none;
+  }
 }
 
 #section-three {
-  @include mQ(1000px, 800px) {
+  @include mQ(1000px, 767px) {
+
     .loader {
       position: relative;
       top: 60px;
@@ -107,7 +112,10 @@
       }
     }
   }
-  @include mQ(799px, 610px) {
+  @include mQ(766px, 610px) {
+    h2{
+      @include headerMobileText;
+    }
     .loader {
       position: relative;
       top: 60px;
@@ -147,8 +155,12 @@
     .mini-hidden {
       display: none;
     }
+    .maxi-hidden {
+      display: block;
+    }
     .google-map{
       height: 300px;
+      margin: 0;
     }
     .google-map-element{
       height: 300px;
@@ -156,6 +168,9 @@
 
   }
   @include mQ(609px) {
+    h2{
+      @include headerMobileText;
+    }
     .loader {
       position: relative;
       top: 60px;
@@ -194,11 +209,15 @@
     .mini-hidden {
       display: none;
     }
+    .maxi-hidden {
+      display: block;
+    }
     .google-map{
-      height: 320px;
+      height: 300px;
+      margin: 0;
     }
     .google-map-element{
-      height: 320px;
+      height: 300px;
     }
   }
 }
