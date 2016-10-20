@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
+import {animateScroll as scroll} from 'react-scroll';
 
 import '../styles/section3.scss';
 import {Element} from 'react-scroll';
@@ -16,11 +17,9 @@ class SectionThree extends Component {
     this.state = {
       showSignUp: false
     };
-    console.log(this.state);
   }
   componentWillMount() {
     this.props.fetchBookshelves().then(this.props.fetchBooks(1));
-    console.log(window.innerWidth);
   }
 
   handleMarkerClick(id) {
@@ -29,6 +28,13 @@ class SectionThree extends Component {
 
   showSignUp() {
     this.setState({showSignUp: !this.state.showSignUp});
+    if(!this.state.showSignUp) {
+      scroll.scrollMore(350);
+    }
+  }
+
+  handleSubmit(values) {
+    console.log(values);
   }
 
   render() {
@@ -40,13 +46,13 @@ class SectionThree extends Component {
           lng: val.bookshelf_longitude
         },
         key: val.bookshelf_id,
-        defaultAnimation: 2
+        defaultAnimation: 2,
+        icon: '/images/marker.png'
       });
     });
 
     return(
-      <Element name='register'>
-        <section id="section-three">
+        <Element name='register' id="section-three">
           <h2 className="maxi-hidden" onClick={this.showSignUp.bind(this)}>rejestracja</h2>
           <BookshelvesMap
             markers={markers}
@@ -56,11 +62,10 @@ class SectionThree extends Component {
             handleMarkerClick={this.handleMarkerClick.bind(this)}
           />
           <div className="ui container">
-          <div className={this.state.showSignUp ? `sign-up` : `mini-hidden sign-up`}><SignUp /></div>
+          <div className={this.state.showSignUp ? `sign-up` : `mini-hidden sign-up`}><SignUp onSubmit={this.handleSubmit}/></div>
           <BookList />
           </div>
-        </section>
-      </Element>
+        </Element>
     );
   }
 }

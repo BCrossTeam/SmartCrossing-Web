@@ -9,12 +9,12 @@ class Tutorial extends Component {
         <div className="ui three cards mob-hidden">
           <a className="red card">
             <div className="image">
-            <img src="http://placehold.it/250x160" />
+            <img src="/images/download-app.png" />
             </div>
           </a>
           <a className="red card">
             <div className="image">
-            <img src="http://placehold.it/250x160" />
+            <img src="/images/scan-book.png" />
             </div>
           </a>
           <a className="red card">

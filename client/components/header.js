@@ -11,14 +11,8 @@ class Header extends Component {
     this.state = {menu: false};
   }
   componentDidMount() {
-    Events.scrollEvent.register('begin', function(to, element) {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register('end', function(to, element) {
-      console.log("end", arguments);
-    });
-
+    Events.scrollEvent.register('begin');
+    Events.scrollEvent.register('end');
     scrollSpy.update();
 
     window.addEventListener('resize', () => {
@@ -59,7 +53,7 @@ class Header extends Component {
           <Link activeClass="active" to="projekt" spy={true} smooth={true} offset={-50} duration={500} className="item mob-item">
             projekt
           </Link>
-          <img src="/images/wlogo.png" className="logo-img" />
+          <img src="/images/logo.png" className="logo-img" />
           <Link activeClass="active" to="tutorial" spy={true} smooth={true} offset={-70} duration={500} className="item mob-item">
             pobierz
           </Link>

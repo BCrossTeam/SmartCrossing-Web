@@ -8,11 +8,9 @@ class SectionTwo extends Component {
 
   render() {
     return(
-      <Element name="tutorial">
-      <section id="section-two">
+      <Element name="tutorial" id="section-two">
             <h2>Jak to działa?</h2>
         <Tutorial />
-      </section>
       </Element>
     );
   }

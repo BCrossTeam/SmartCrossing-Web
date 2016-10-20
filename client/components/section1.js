@@ -9,8 +9,7 @@ import TopReaders from './top_readers';
 class SectionOne extends Component {
   render() {
     return(
-      <section id="section-one">
-      <Element name="projekt">
+      <Element name="projekt" id="section-one">
         <div className="ui container">
           <StatsModule />
           <img src="/images/wroc.jpg" className="book-img" alt=""/>
@@ -24,7 +23,6 @@ class SectionOne extends Component {
           </div>
         </div>
       </Element>
-      </section>
     );
   }
 }

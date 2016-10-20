@@ -67,6 +67,13 @@
     width: 50%;
     margin: 0 auto;
     padding: 50px 0;
+    .error-message {
+      color: $schizo;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 5px 0;
+      display: block;
+    }
   }
   .maxi-hidden {
     display: none;
