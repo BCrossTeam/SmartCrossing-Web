@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
 import {animateScroll as scroll} from 'react-scroll';
+import axios from 'axios';
 
 import '../styles/section3.scss';
 import {Element} from 'react-scroll';
@@ -15,8 +16,13 @@ class SectionThree extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showSignUp: false
+      screenWidth: window.innerWidth
     };
+  }
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+        this.setState({screenWidth: window.innerWidth});
+    });
   }
   componentWillMount() {
     this.props.fetchBookshelves().then(this.props.fetchBooks(1));
@@ -26,15 +32,22 @@ class SectionThree extends Component {
     this.props.fetchBooks(id);
   }
 
-  showSignUp() {
-    this.setState({showSignUp: !this.state.showSignUp});
-    if(!this.state.showSignUp) {
-      scroll.scrollMore(350);
+  renderSecondPart() {
+    if(this.state.screenWidth < 767) {
+      return(
+        <Element name='register' className="ui container">
+        <BookList />
+        <SignUp onSubmit={this.handleSubmit}/>
+        </Element>
+      );
+    } else {
+      return (
+        <Element name='register' className="ui container">
+        <SignUp onSubmit={this.handleSubmit} />
+        <BookList />
+        </Element>
+      );
     }
-  }
-
-  handleSubmit(values) {
-    console.log(values);
   }
 
   render() {
@@ -52,20 +65,15 @@ class SectionThree extends Component {
     });
 
     return(
-        <Element name='register' id="section-three">
-          <h2 className="maxi-hidden" onClick={this.showSignUp.bind(this)}>rejestracja</h2>
+        <section id="section-three">
           <BookshelvesMap
             markers={markers}
             containerElement={<div className="google-map" />}
             mapElement={<div className="google-map-element" />}
-            onMapLoad={_.noop}
             handleMarkerClick={this.handleMarkerClick.bind(this)}
           />
-          <div className="ui container">
-          <div className={this.state.showSignUp ? `sign-up` : `mini-hidden sign-up`}><SignUp onSubmit={this.handleSubmit}/></div>
-          <BookList />
-          </div>
-        </Element>
+          {this.renderSecondPart()}
+        </section>
     );
   }
 }

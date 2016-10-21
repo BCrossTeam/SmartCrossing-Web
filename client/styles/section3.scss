@@ -74,9 +74,10 @@
       padding: 5px 0;
       display: block;
     }
-  }
-  .maxi-hidden {
-    display: none;
+    h2{
+      font-size: 2.5em;
+      text-transform: capitalize;
+    }
   }
 }
 
@@ -120,9 +121,6 @@
     }
   }
   @include mQ(766px, 610px) {
-    h2{
-      @include headerMobileText;
-    }
     .loader {
       position: relative;
       top: 60px;
@@ -158,12 +156,6 @@
         width: 100%;
 
       }
-    }
-    .mini-hidden {
-      display: none;
-    }
-    .maxi-hidden {
-      display: block;
     }
     .google-map{
       height: 300px;
@@ -175,9 +167,6 @@
 
   }
   @include mQ(609px) {
-    h2{
-      @include headerMobileText;
-    }
     .loader {
       position: relative;
       top: 60px;
@@ -212,12 +201,6 @@
       button {
         width: 100%;
       }
-    }
-    .mini-hidden {
-      display: none;
-    }
-    .maxi-hidden {
-      display: block;
     }
     .google-map{
       height: 300px;

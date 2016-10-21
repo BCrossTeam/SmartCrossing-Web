@@ -7,7 +7,7 @@ import {reducer as formReducer} from 'redux-form';
 const rootReducer = combineReducers({
   stats: StatsReducer,
   map: MapReducer,
-  signup: SignUpReducer,
+  sign: SignUpReducer,
   form: formReducer
 });
 

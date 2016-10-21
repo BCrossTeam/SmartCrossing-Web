@@ -4,7 +4,8 @@ const INITIAL_STATE = {
   books: null,
   bookshelves: null,
   readers: null,
-  topUsers: null
+  topUsers: null,
+  hasSigned: null
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -15,7 +16,7 @@ export default function(state = INITIAL_STATE, action) {
       return {...state, bookshelves: action.payload.data.bookshelf_global_count};
     case FETCH_BORROWED_BOOKS:
       return {...state, books: action.payload.data.book_global_borrow_count};
-    case FETCH_TOP_USERS: 
+    case FETCH_TOP_USERS:
       return {...state, topUsers: action.payload.data};
     default:
       return state;

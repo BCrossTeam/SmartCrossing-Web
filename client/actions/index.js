@@ -8,5 +8,7 @@ export const urls = {
   bookshelvesList: `bookshelf/`,
   userStatsByID: [`user/`,`/stats`],
   usersNumber: `user/stats`,
-  topUsers: `user/ranking/3`
+  topUsers: `user/ranking/3`,
+  signUp: 'user/',
+  usersList: 'user/ranking'
 };

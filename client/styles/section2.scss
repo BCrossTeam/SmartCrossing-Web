@@ -19,6 +19,9 @@
   .column{
     text-align: center;
     margin-top: 20px;
+    p{
+      text-align: justify;
+    }
   }
   .step{
     text-transform: uppercase;
@@ -64,11 +67,6 @@
       width: 50%;
       margin-top: 10px;
     }
-    .column {
-      p{
-        text-align: justify;
-      }
-    }
   }
   @include mQ(766px, 610px) {
     height: 500px;
@@ -76,8 +74,7 @@
       width: 20%;
     }
     h2{
-      @include headerMobileText;
-      margin: 0 0 40px 0;
+      font-size: 5.2em;
     }
     .download{
       width: 60%;
@@ -92,7 +89,7 @@
   @include mQ(610px) {
     h2{
       @include headerMobileText;
-      margin: 0 0 40px 0;
+      margin: 0 0 25px 0;
     }
     height: 400px;
     .container{
