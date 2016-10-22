@@ -7,6 +7,7 @@
   color: $imdur;
   z-index: 80;
   overflow-y: scroll;
+        left: 20px;
 }
 
 #section-three{
@@ -66,7 +67,7 @@
     position: relative;
     width: 50%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 10px 0;
     .error-message {
       color: $schizo;
       font-weight: bold;
@@ -100,10 +101,9 @@
       position: static;
       top: 0;
       height: auto;
-      max-width: 50%;
+      width: 50%;
       padding: 0;
       margin: 0;
-      overflow-y: inherit;
       h3 {
         padding-top: 10px;
       }
@@ -138,7 +138,7 @@
       position: static;
       top: 0;
       height: auto;
-      max-width: 100%;
+      width: 100%;
       padding: 0;
       margin: 0;
       overflow-y: inherit;
@@ -184,7 +184,7 @@
       position: static;
       top: 0;
       height: auto;
-      max-width: 100%;
+      width: 100%;
       padding: 0;
       overflow-y: inherit;
       margin: 0;

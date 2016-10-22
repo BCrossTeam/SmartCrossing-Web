@@ -3,11 +3,66 @@
 
 footer{
   background-color: $grey;
+  display: flex;
   z-index: 150;
-  height: 220px;
+  height: 180px;
   position: relative;
-  -webkit-clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+  .wrapper{margin: 0 auto;}
+  .team-list{
+    color:#fff !important;
+    margin: 0 auto !important;
+    .item{
+    }
+    .header{
+      color:#fff !important;
+    }
+  }
+  .mob-foot{
+    display: none;
+  }
+
+  .credits{
+    margin-top: 115px;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0 0 2px 40px;
+  }
+
+  .contact{
+    margin: 70px 0 0 20px !important;
+    .item{
+      font-size: 1.9em;
+      color: #fff ;
+    }
+    .item:nth-child(2){
+      padding-left: 3px !important;
+    }
+  }
+
+  @include mQ(1250px,1001px) {
+    .wrapper{
+      width: 600px;
+      margin: 0 0 0 auto;
+
+    }
+    .mob-foot{
+      display: none;
+    }
+    .credits{
+      margin-top: 80px;
+    }
+    .team-list {
+      .item:first-child{
+        margin: 0 0 0 14px !important;
+      }
+      .item{
+        margin: 0 !important;
+        width: (100%/3) !important;
+      }
+    }
+  }
 
   @include mQ(1000px) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -15,9 +70,45 @@ footer{
     margin-top: 50px;
     position: static;
     top: 0;
-    height: 50px;
+    height: auto;
     width: 100%;
     padding: 0;
     margin: 0;
+    .wrapper{
+      display: none;
+    }
+    .mob-foot{
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px 0;
+    }
+    .contact{
+      display:none;
+    }
+    .credits{
+      margin: 0 0 0 15px;
+      padding: 0;
+      font-size: 1.6em;
+    }
+    .copyrights{
+      margin-bottom: 7px;
+      font-size: 1.2em;
+      span{
+        line-height: 110%;
+      }
+    }
+    .list{
+      margin: 0 10px 0 auto !important;
+
+      .item{
+        font-size: 1.8em;
+        .header{
+          margin-top: 5px !important;
+        }
+      }
+    }
   }
 }
