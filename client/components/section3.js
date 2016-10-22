@@ -53,15 +53,28 @@ class SectionThree extends Component {
   render() {
     const markers = [];
     _.forIn(this.props.map.bookshelves, (val, key) => {
-      markers.push({
-        position: {
-          lat: val.bookshelf_latitude,
-          lng: val.bookshelf_longitude
-        },
-        key: val.bookshelf_id,
-        defaultAnimation: 2,
-        icon: '/images/marker.png'
-      });
+      if(this.props.map.activeBooks && this.props.map.activeBooks.bookshelf_id == val.bookshelf_id) {
+        markers.push({
+          position: {
+            lat: val.bookshelf_latitude,
+            lng: val.bookshelf_longitude
+          },
+          key: val.bookshelf_id,
+          defaultAnimation: 2,
+          icon: '/images/markerActive.png'
+        });
+      } else {
+        markers.push({
+          position: {
+            lat: val.bookshelf_latitude,
+            lng: val.bookshelf_longitude
+          },
+          key: val.bookshelf_id,
+          defaultAnimation: 2,
+          icon: '/images/marker.png'
+        });
+      }
+
     });
 
     return(

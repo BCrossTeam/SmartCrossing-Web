@@ -6,8 +6,7 @@ const INITIAL_STATE = {
     num: null,
     content: undefined
   },
-  signSuccess: null,
-  userInBase: null
+  signSuccess: null
 };
 
 export default function(state = INITIAL_STATE, action) {

@@ -8,33 +8,33 @@ class Footer extends Component {
     const team = [
       {
         name: 'Michał Szachniewicz',
-        role: 'Webmastah',
-        avatar: "/images/users.png"
+        role: 'Webmaster',
+        avatar: "/images/szacho.jpg"
       },
       {
         name: 'Sebastian Zasuwa',
-        role: 'backend',
+        role: 'Back-end',
         avatar: "/images/users.png"
       },
       {
         name: 'Arkadiusz Mirecki',
-        role: 'android',
+        role: 'Front-end',
         avatar: "/images/users.png"
       },
       {
-        name: 'Kuba Dworzański',
-        role: 'marketing',
+        name: 'Jakub Dworzański',
+        role: 'Public Relations',
         avatar: "/images/users.png"
       },
       {
         name: 'Joachim Schmidt',
-        role: 'androif',
+        role: 'Front-end',
         avatar: "/images/users.png"
       },
       {
         name: 'Jerzy Wroczyński',
-        role: 'grafik',
-        avatar: "/images/users.png"
+        role: 'Graphic Design',
+        avatar: "/images/jerzy.png"
       },
     ];
     return team.map((member) => {

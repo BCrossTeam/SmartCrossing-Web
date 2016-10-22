@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 
+import '../../server/public/semantic.min.css';
 import '../styles/main.scss';
+import '../../server/public/jquery.min.js';
+import '../../server/public/semantic.min.js';
 
 import Header from './header';
 import SectionOne from './section1';
