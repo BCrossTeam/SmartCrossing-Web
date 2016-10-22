@@ -90,7 +90,7 @@ function validate(values) {
   } else if (username.length > 50 || username.length < 4) {
     errors.username = 'Nazwa użytkownika może mieć długość od 4 do 50 znaków.';
   } else if (!legalChars.test(username)) {
-    errors.username = 'Nazwa użytkownika jest nieprawidłowa, powinna zaczynać się od litery oraz nie zawierać zbędnych spacji.';
+    errors.username = 'Nazwa użytkownika zawiera nieprawidłowe znaki.';
   }
 
   if(!email) {

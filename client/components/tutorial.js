@@ -19,7 +19,7 @@ class Tutorial extends Component {
           </a>
           <a className="red card">
             <div className="image">
-            <img src="http://placehold.it/250x160" />
+            <img src="/images/readit.png" />
             </div>
           </a>
         </div>
