@@ -1,6 +1,17 @@
 @import "variables";
 @import "mixins";
 
+#background-pause {
+  background: url('/images/osso.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 500px;
+  @include sectionShadow;
+  @include mQ(1000px) {
+    height: 300px;
+  }
+}
+
 #section-two {
   color: red;
   height: auto;

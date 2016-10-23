@@ -9,6 +9,7 @@ class SectionTwo extends Component {
   render() {
     return(
       <Element name="tutorial" id="section-two">
+            <div id="background-pause"></div>
             <h2>Jak to działa?</h2>
         <Tutorial />
       </Element>
