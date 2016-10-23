@@ -4,9 +4,9 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon --exec babel-node -- server/index.js\" \"webpack --config ./webpack.config.dev.js --progress --colors\"",
-    "postinstall": "webpack --config ./webpack.config.prod.js --progress --colors",
-    "start": "nodemon --exec babel-node -- server/index.js"
+    "dev": "nodemon --watch server --exec babel-node -- server/index.js",
+    "postinstall": "webpack -p --config ./webpack.config.prod.js --progress --colors",
+    "start": "NODE_ENV=production nodemon --exec babel-node server/index.js"
   },
   "engines": {
     "node": "6.8.0"

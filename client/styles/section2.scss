@@ -3,10 +3,13 @@
 
 #section-two {
   color: red;
-  height: 750px;
+  height: auto;
   .grid{
     width: 100%;
     margin: 0 auto;
+  }
+  .container{
+    height: auto;
   }
   h2 {
     text-align: center;
@@ -46,13 +49,13 @@
 
   .download{
     width: 40%;
-    padding: 15px 0;
+    margin: 20px auto 25px auto;
     &:hover {
       cursor:pointer;
     }
   }
   .desk-hidden{
-    display: none;
+    display: none !important;
   }
 }
 #section-two{
@@ -69,7 +72,6 @@
     }
   }
   @include mQ(766px, 610px) {
-    height: 500px;
     hr{
       width: 20%;
     }
@@ -77,7 +79,7 @@
       font-size: 5.2em;
     }
     .download{
-      width: 60%;
+      width: 50%;
       margin-top: 0;
     }
     .column {
@@ -89,9 +91,9 @@
   @include mQ(610px) {
     h2{
       @include headerMobileText;
-      margin: 0 0 25px 0;
+      margin: 0;
     }
-    height: 400px;
+    height: auto;
     .container{
       padding: 0;
       margin: 0 !important;
@@ -108,19 +110,18 @@
     .mob-hidden{
       display: none;
     }
-    .desk-hidden{
-      display: block;
-    .header {
-      font-size: 2.3em;
-      padding: 5px;
-      text-transform: uppercase;
-      @include textShadow;
+    .cards{
+      width: 95%;
+      margin: 0 auto;
+      margin-top: .875em;
     }
+    .desk-hidden{
+      display: block !important;
+
     }
     .download{
-      width: 60%;
-      margin-top: 5px;
-      margin-bottom: 0;
+      width: 80%;
+      margin: 20px auto 30px auto;
     }
   }
 }

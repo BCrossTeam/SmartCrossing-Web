@@ -5,9 +5,8 @@ module.exports = {
   devtools: 'eval-source-map',
   entry: './client/index.js',
   output: {
-    path: path.join(__dirname, 'server/public'),
-    filename: 'bundle.js',
-    publicPath: '/server/public/'
+    path: '/',
+    publicPath: '/server/public'
   },
   plugins: [
    new webpack.ProvidePlugin({

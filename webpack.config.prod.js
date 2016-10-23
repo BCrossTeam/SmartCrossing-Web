@@ -3,15 +3,12 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
-
   entry: path.join(__dirname, '/client/index.js'),
-
   output: {
     path: path.join(__dirname, 'server/public'),
     filename: 'bundle.js',
     publicPath: 'server/public/'
   },
-
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
