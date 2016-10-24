@@ -28,15 +28,15 @@ class Tutorial extends Component {
           <div className="row">
             <div className="column">
               <span className="step">zainstaluj</span><hr/>
-              <p>In laoreet turpis ac turpis laoreet auctor. Morbi a consectetur dui. Aenean sit amet fringilla arcu, nec faucibus libero. Phasellus aliquam euismod felis, at dapibus diam lobortis sed.</p>
+              <p>Aplikacja jest niezbędna podczas uwalniania książek - automatycznie dodaje je do bazy danych oraz umożliwia zbieranie punktów i zdobywanie osiągnięć za Twoją aktywność.</p>
             </div>
             <div className="column">
               <span className="step">skanuj</span><hr/>
-              <p>Efficitur est faucibus. Morbi ornare, dolor at porttitor placerat, felis velit mattis sapien, ac lobortis tortor magna vel mi. Nam dictum ante condimentum enim mollis lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+              <p>Skanując kod kreskowy książki, dostarczasz do systemu wszystkie niezbędne o niej informacje, dzięki czemu nie musisz ich wprowadzać ręcznie, a cała operacja trwa zaledwie tyle, co zrobienie zdjęcia.</p>
             </div>
             <div className="column">
               <span className="step">czytaj</span><hr/>
-              <p>Nunc dignissim accumsan magna, sit amet volutpat quam mollis vel. Pellentesque et aliquam purus, tincidunt pharetra velit. Fusce sit amet pulvinar odio, vitae efficitur magna. Nam laoreet metus erat, vel placerat orci congue et.</p>
+              <p>Ostatnim krokiem jest nic innego jak samo czytanie, jednak pamiętaj czytelniku, że potrzebujemy Ciebie, aby wspólnie tworzyć żywą bibliotekę. Jeżeli możesz, zajrzyj do nas od czasu do czasu ;]</p>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ class Tutorial extends Component {
           </a>
         </div>
 
-        <img src="/images/google.png" className="ui centered image download" />
+        <a href="https://play.google.com/store/apps/details?id=com.futurologeek.smartcrossing" target="_blank"><img src="/images/google.png" className="ui centered image download" /></a>
       </div>
     );
   }

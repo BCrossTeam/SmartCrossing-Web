@@ -15,7 +15,7 @@ class StatsModule extends Component {
 
   render() {
     const {books, bookshelves, readers} = this.props.stats;
-    if(!books || !bookshelves || !readers) {
+    if((!books && books !==0) || (!bookshelves && bookshelves !==0) || (!readers && readers !==0)) {
       return(
       <div id="module-one">
         <h2>Uwolnij wiedzę!</h2>
@@ -42,7 +42,7 @@ class StatsModule extends Component {
               <img src="images/bookshelf.png" className="ui inline image" />
             </div>
             <div className="label">
-              <span>Pólek we Wrocławiu</span>
+              <span>Półek w Polsce</span>
             </div>
           </div>
 

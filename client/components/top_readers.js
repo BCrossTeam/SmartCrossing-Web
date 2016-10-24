@@ -9,9 +9,13 @@ class TopReaders extends Component {
 
   renderTopUsers() {
     const rank = this.props.topUsers;
-    if(!rank || rank.length != 3) {
+    if(!rank) {
       return(
         <div className="ui active centered big text loader">Ładowanie..</div>
+      );
+    } else if(rank.length != 3) {
+      return(
+        <h5 style={{color: '#B90504', fontSize: '1.5em'}}>Brak wystarczającej liczby użytkowników.</h5>
       );
     }
     return rank.map((topUser, i) => {

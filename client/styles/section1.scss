@@ -18,6 +18,7 @@
     width: auto;
     margin: 0 auto;
   }
+
 }
 
 #section-one {
@@ -28,6 +29,12 @@
     left: 300px;
     max-height: 290px;
     @include sectionShadow;
+  }
+  .motto{
+    font-size: 1.1em;
+  }
+  .highlighted{
+    font-weight: bold;
   }
   @include mQ(1000px, 768px) {
     @include sec-one-resp;
@@ -93,10 +100,6 @@
     top: 80px;
     text-align: center;
     font-size: 4em;
-    &:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
     @include mQ(1000px) {
       display:none;
     }
