@@ -25,8 +25,8 @@ Strona internetowa projektu SmartCrossing, pełni funkcję prezentacyjną.
     - Footer
 
 ### Skrypty npm
-`npm run dev` - uruchamia środowisko developerskie\
-`npm run postintall` - kompiluje aplikację do bundle.js\
+`npm run dev` - uruchamia środowisko developerskie  
+`npm run postinstall` - kompiluje aplikację do bundle.js  
 `npm start` - uruchamia serwer w trybie 'production'
 
 

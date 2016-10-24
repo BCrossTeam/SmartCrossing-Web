@@ -5,12 +5,39 @@ import {fetchUsersNumber, fetchBookshelfNumber, fetchBorrowedBooksNumber} from '
 class StatsModule extends Component {
   constructor(props){
     super(props);
+    if(window.innerWidth < 600) {
+      this.state = {
+        small: 'small',
+        big: ''
+      };
+    } else {
+      this.state = {
+        small: '',
+        big: 'large'
+      };
+    }
   }
 
   componentWillMount() {
     this.props.fetchUsersNumber();
     this.props.fetchBookshelfNumber();
     this.props.fetchBorrowedBooksNumber();
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      if(window.innerWidth < 600) {
+        this.setState({
+          small: 'tiny',
+          big: 'tiny'
+        });
+      } else {
+        this.setState({
+          small: '',
+          big: 'large'
+        });
+      }
+    });
   }
 
   render() {
@@ -26,7 +53,7 @@ class StatsModule extends Component {
       <div id="module-one">
         <h2>Uwolnij wiedzę!</h2>
         <div className="ui statistics">
-          <div className="ui statistic massive first-value">
+          <div className={`ui statistic ${this.state.small} first-value`}>
               <div className="value">
                 <img src="images/agenda.png" className="ui inline image" />
                 <span>{books}</span>
@@ -36,7 +63,7 @@ class StatsModule extends Component {
               </div>
             </div>
 
-          <div className="ui statistic large second-value">
+          <div className={`ui statistic ${this.state.big} second-value`}>
             <div className="value">
               <span>{bookshelves}</span>
               <img src="images/bookshelf.png" className="ui inline image" />
@@ -46,7 +73,7 @@ class StatsModule extends Component {
             </div>
           </div>
 
-          <div className="ui statistic massive third-value">
+          <div className={`ui statistic ${this.state.small} third-value`}>
             <div className="value">
               <img src="images/users.png" className="ui inline image" />
               <span>{readers}</span>
